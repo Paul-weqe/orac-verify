@@ -1,0 +1,10 @@
+{
+  "vendor": "frr",
+  "interfaces": [
+    {"name": "eth1", "vrf": "default", "index": 3, "mtu": 1400, "mtu6": 1400, "speed": 10000, "metric": 0, "macAddress": "de:28:6f:dd:6d:f6"},
+    {"name": "eth2", "vrf": "default", "index": 5, "mtu": 9000, "mtu6": 9000, "speed": 10000, "metric": 0, "macAddress": "e2:bb:1d:43:c9:8d"},
+    {"name": "lo", "vrf": "default", "index": 1, "mtu": 65536, "mtu6": 65536, "speed": 0, "metric": 0, "macAddress": "00:00:00:00:00:00"}
+  ],
+  "interfacesByName": {},
+  "stats": {"total": 3, "byVRF": {"default": 3}}
+}
