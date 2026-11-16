@@ -17,6 +17,13 @@ build:
 build-z3:
 	$(CGO_ENV) go build -ldflags="-r $(Z3_RPATH)" -o bin/z3 cmd/z3/main.go
 
+bin-verify:
+	$(CGO_ENV) go build -ldflags="-r $(Z3_RPATH)" -o bin/verify ./cmd/verify
+
+run-verify: bin-verify
+	./bin/verify --data testdata/interfaces-pass.json --mtu-min 1500
+	./bin/verify --data testdata/interfaces-fail.json --mtu-min 1500 || true
+
 test:
 	$(CGO_ENV) go test ./...
 
